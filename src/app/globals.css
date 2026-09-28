@@ -1,26 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Geist", sans-serif;
+}
+
+.robot {
+  font-family: "Roboto", sans-serif;
+
+}
+
+.archivo {
+  font-family: "Archivo Black", sans-serif;
+
+}
+
+@theme {
+
+  /* color */
+
+  --color-dark-gray: #70767D;
+  --color-light-orange: #F37421;
+  --color-navy-blue: #2E458D;
+  --color-off-white: #F8F3EA;
+  --color-light-gray: #D6D6D6;
+  /* text */
+
+  --text-custom-28: 28px;
+  --text-custom-64: 64px;
+
+
+  /* leading */
+
+  --leading-100: 100%;
+  --leading-107: 107%;
+  --leading-120: 120%;
+  --leading-160: 160%;
+
 }
