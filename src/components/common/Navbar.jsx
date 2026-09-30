@@ -197,12 +197,17 @@ const Navbar = () => {
                 </span>
 
                 <span className="text-white group-hover:text-light-orange transition-colors duration-300">
-                  <Icon icon="rightarrow" className={"text-white group-hover:text-light-orange transition-colors duration-300"} />
+                  <Icon
+                    icon="rightarrow"
+                    className={
+                      "text-white group-hover:text-light-orange transition-colors duration-300"
+                    }
+                  />
                 </span>
               </button>
 
-              <div className="bg-off-white w-10.25 h-10.25 rounded-[63px] flex justify-center items-center">
-                <Icon icon={"store"}></Icon>
+              <div className="bg-off-white w-10.25 hover:scale-110 cursor-pointer duration-300 transition-all  scroll-smooth h-10.25 rounded-[63px] flex justify-center items-center">
+                <Icon icon={"store"} className={"group-hover:scale-110"}></Icon>
               </div>
 
               <LanguageDropdown />

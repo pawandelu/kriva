@@ -54,7 +54,7 @@ const Marque = () => {
       </div>
 
       {/* Blue Strip */}
-      <div className="absolute left-1/2 top-[50%] sm:top-[45%]  md:top-[50%] w-[110%] -translate-x-1/2 -translate-y-1/2 -rotate-10 sm:-rotate-8 bg-[#3C59A2] py-4 sm:py-5">
+      <div className="absolute left-1/2 top-[50%] sm:top-[45%]  md:top-[50%] w-[110%] -translate-x-1/2 -translate-y-1/2 -rotate-10 sm:-rotate-8 bg-blue-150 py-4 sm:py-5">
         <Marquee
           direction="left"
           speed={45}
