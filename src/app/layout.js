@@ -14,23 +14,41 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
 export const metadata = {
   metadataBase: new URL("https://kriva-five.vercel.app/"),
-  title: "About Us | Stack Audio",
-  description: "About Stack Audio - our story, team, and commitment to craftsmanship.",
+
+  title: "Kaijuu Crew",
+
+  description:
+    "About Stack Audio - our story, team, and commitment to craftsmanship.",
+
   openGraph: {
-    title: "About Us | Stack Audio",
-    description: "About Stack Audio - our story, team, and commitment to craftsmanship.",
+    title: "Kaijuu crew",
+
+    description:
+      "About Stack Audio - our story, team, and commitment to craftsmanship.",
+
     url: "https://kriva-five.vercel.app/",
+
     siteName: "Stack Audio",
+
     images: [
-      { url: "/assets/images/png/meta.png", width: 1200, height: 630, alt: "Stack Audio" },
+      {
+        url: "/assets/images/png/meta.png",
+        width: 1200,
+        height: 630,
+        alt: "Stack Audio",
+      },
     ],
+
     type: "website",
   },
-  twitter: { card: "summary_large_image", images: ["/assets/images/png/meta.png"] },
-}
+
+  twitter: {
+    card: "summary_large_image",
+    images: ["/assets/images/png/meta.png"],
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
