@@ -26,17 +26,53 @@ body {
   --color-navy-blue: #2E458D;
   --color-off-white: #F8F3EA;
   --color-light-gray: #D6D6D6;
+  --color-gray-150: #444444;
+  --color-off-black: #010101;
+  --color-orangr-150: #E98300;
+  --color-yellow-150: #D3DF55;
+  --color-blue-150: #3C59A2;
   /* text */
 
   --text-custom-28: 28px;
   --text-custom-64: 64px;
+  --text-custom-31: 31.06px;
 
 
   /* leading */
 
   --leading-100: 100%;
   --leading-107: 107%;
+  --leading-110: 110%;
   --leading-120: 120%;
+  --leading-132: 132%;
+  --leading-145: 145%;
+  --leading-158: 158%;
   --leading-160: 160%;
 
+}
+
+
+.swiper-slide {
+  width: 424px !important;
+}
+
+@media (min-width: 640px) {
+  .swiper-slide {
+    width: 424px !important;
+  }
+}
+
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 20s linear infinite;
 }
