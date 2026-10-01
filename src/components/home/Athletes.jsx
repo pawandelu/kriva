@@ -100,7 +100,7 @@ const Athletes = () => {
           ))}
         </Swiper>
 
-        {/* pagination dashes */}
+
         <div className="flex justify-center items-center gap-3 mt-8 md:mt-10">
           {ATHLETES.map((_, i) => (
             <button

@@ -6,17 +6,17 @@ import Icon from "./Icon";
 const footerColumns = [
   {
     title: "Quick Links",
-    width: "md:w-38.75", // 155px
+    width: "md:w-38.75", 
     items: ["Shop", "Learn", "About", "Education", "Products", "Transparency"],
   },
   {
     title: "Community Discounts",
-    width: "md:w-63", // 252px
+    width: "md:w-63", 
     items: ["Military", "Trainers", "Students"],
   },
   {
     title: "Legal Links",
-    width: "md:w-39.25", // 157px
+    width: "md:w-39.25", 
     items: ["Privacy Policy", "Terms & Conditions"],
   },
 ];

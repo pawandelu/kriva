@@ -9,7 +9,6 @@ import Icon from "../common/Icon";
 const PopupModal = ({ item, onClose }) => {
   const modalRef = useRef(null);
 
-  // Close on outside click
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (modalRef.current && !modalRef.current.contains(e.target)) {
@@ -17,7 +16,8 @@ const PopupModal = ({ item, onClose }) => {
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
-    // Prevent background scroll
+
+
     document.body.style.overflow = "hidden";
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -25,7 +25,7 @@ const PopupModal = ({ item, onClose }) => {
     };
   }, [onClose]);
 
-  // Close on Escape key
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") onClose();
@@ -71,7 +71,7 @@ const PopupModal = ({ item, onClose }) => {
               const imgObj = item.popup.images.find((x) => x.src);
               const specItems = item.popup.images.filter((x) => x.title);
               if (imgObj && specItems.length > 0) {
-                // Flex layout: image left, specs right
+
                 return (
                   <div className="flex flex-col sm:flex-row gap-6 items-start">
                     <Image
@@ -101,7 +101,7 @@ const PopupModal = ({ item, onClose }) => {
                   </div>
                 );
               }
-              // Default grid layout
+
               return (
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
                   {item.popup.images.map((imgItem, i) => (
@@ -159,7 +159,7 @@ const Team = () => {
             {RIGHT_MAGNER.map((items, index) => (
               <div
                 key={index}
-                className="border border-black/8  bg-white p-4 rounded-xl flex flex-col justify-between "
+                className="border border-black/8  bg-white p-4 min-h-183.5 rounded-xl flex flex-col justify-between "
               >
                 <div>
                   <Image
@@ -191,7 +191,7 @@ const Team = () => {
           </div>
         </div>
       </div>
-      {/* Popup Modal */}
+
       {activePopup && (
         <PopupModal item={activePopup} onClose={() => setActivePopup(null)} />
       )}

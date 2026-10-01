@@ -3,7 +3,7 @@ import Icon from "@/components/common/Icon";
 import { ComfortData } from "@/utils/helper";
 import Heading from "../common/Heading";
 import Para from "../common/Para";
-
+import "animate.css";
 const Comfort = () => {
   return (
     <div className="px-4 lg:py-35.5 md:py-22.5 sm:py-15 py-10 overflow-hidden">
@@ -36,7 +36,9 @@ const Comfort = () => {
         </div>
 
         <div className="lg:max-w-140 w-full flex flex-col items-center lg:items-start text-center lg:text-left">
-          <Heading vari={"sec"}>Comfort That Keeps You Moving</Heading>
+          <Heading vari={"sec"} className="animate__animated animate__slideInDown">
+            Comfort That Keeps You Moving
+          </Heading>
           <Para vari={"sec"} className="mt-3 sm:mt-4">
             Kriva’s CBDA works quickly to ease soreness, release tension, and
             help your body stay steady, supported, and ready for what the day

@@ -12,7 +12,7 @@ const Recovery = () => {
   return (
     <div className={`${body.className} px-4`}>
       <div className="relative max-w-285 mx-auto mt-16 sm:mt-24 md:mt-29.5 md:-mb-41 -mb-40 z-20">
-        {/* Cream card */}
+
         <div className="bg-off-white rounded-2xl px-6 pt-10 pb-0 sm:px-10 sm:pt-12.5 md:min-h-75 md:py-12.5 md:pr-[46%]">
           <Heading vari={"sec"}>Make Recovery Your Advantage</Heading>
 

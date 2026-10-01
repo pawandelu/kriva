@@ -40,7 +40,7 @@ const MarqueeContent = ({ className, starColor }) => {
 const Marque = () => {
   return (
     <div className="relative h-73.25 overflow-hidden mb-5">
-      {/* Off-white Strip */}
+
       <div className="absolute left-1/2 top-[40%] md:top-[45%] xl:top-[66%] z-10 w-[110%] -translate-x-1/2 -translate-y-1/2 rotate-10 sm:rotate-4 bg-off-white py-4 sm:py-5">
         <Marquee
           direction="right"
@@ -53,7 +53,7 @@ const Marque = () => {
         </Marquee>
       </div>
 
-      {/* Blue Strip */}
+
       <div className="absolute left-1/2 top-[50%] sm:top-[45%]  md:top-[50%] w-[110%] -translate-x-1/2 -translate-y-1/2 -rotate-10 sm:-rotate-8 bg-blue-150 py-4 sm:py-5">
         <Marquee
           direction="left"

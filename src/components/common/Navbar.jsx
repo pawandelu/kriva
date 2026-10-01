@@ -58,8 +58,8 @@ const LanguageDropdown = ({ openUp = false }) => {
 
       <ul
         role="listbox"
-        className={`absolute right-0 z-50 min-w-36 rounded-2xl bg-white shadow-lg border border-dark-gray/10 py-2 transition-all duration-300 ease-in-out ${
-          openUp ? "bottom-full mb-2" : "top-full mt-2"
+        className={`absolute right-0 z-50 min-w-36 rounded-2xl bg-off-white shadow-lg border border-dark-gray/10 py-2 transition-all duration-300 ease-in-out ${
+          openUp ? "bottom-full mb-" : "top-full mt-2"
         } ${
           open
             ? "opacity-100 visible translate-y-0"
@@ -148,7 +148,7 @@ const Navbar = () => {
                 </button>
 
                 <div
-                  className={`absolute left-0 top-full z-50 mt-3 min-w-48 rounded-2xl bg-white shadow-lg border border-dark-gray/10 transition-all duration-300 ease-in-out ${
+                  className={`absolute left-0 top-full z-50 mt-3 min-w-48 rounded-2xl bg-white/90  bg-blur-2xl shadow-lg border border-dark-gray/10 transition-all duration-300 ease-in-out ${
                     desktopProductsOpen
                       ? "opacity-100 visible translate-y-0"
                       : "opacity-0 invisible -translate-y-2"
@@ -329,15 +329,20 @@ const Navbar = () => {
                 <li className="py-3 border-b border-dark-gray/10">About</li>
               </ul>
 
-              <div className="mt-4 flex flex-wrap items-center gap-3">
+              <div className="mt-4 flex flex-wrap items-center gap-3 max-xl:justify-between">
                 <button
                   tabIndex={menuOpen ? 0 : -1}
-                  className="bg-light-orange cursor-pointer duration-300 transition-all p-1.5 rounded-[49px] flex pr-2 items-center gap-1"
+                  className="bg-light-orange cursor-pointer group hover:bg-off-white hover:shadow-[0px_0px_4px_0px_#0000001F] duration-300 transition-all p-1.5 rounded-[49px] flex pr-2 items-center gap-1"
                 >
-                  <span className="bg-white whitespace-nowrap py-2.75 px-4 font-normal text-base uppercase leading-100 rounded-[31px] archivo text-light-orange">
+                  <span className="bg-white group-hover:bg-light-orange group-hover:text-white whitespace-nowrap py-2.75 px-4 font-normal text-base uppercase leading-100 rounded-[31px] archivo text-light-orange duration-300 transition-all">
                     Contact Us
                   </span>
-                  <Icon icon={"rightarrow"}></Icon>
+                  <Icon
+                    icon={"rightarrow"}
+                    className={
+                      "text-white group-hover:text-light-orange transition-colors duration-300"
+                    }
+                  ></Icon>
                 </button>
                 <LanguageDropdown openUp />
               </div>

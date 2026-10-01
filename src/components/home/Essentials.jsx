@@ -5,15 +5,13 @@ import Para from "../common/Para";
 import { TABS, PRODUCTS, TAB_INFO } from "@/utils/helper";
 import Image from "next/image";
 import Icon from "../common/Icon";
+import "animate.css";
 
 const Essentials = () => {
-  // index ki jagah ab id store hoti hai
   const [activeId, setActiveId] = useState(TABS[0].id);
 
-  // progress bar ke liye index chahiye
   const activeIndex = TABS.findIndex((tab) => tab.id === activeId);
 
-  // id se filter
   const products = PRODUCTS.filter((item) => item.tabId === activeId);
   const { heroImage, features } = TAB_INFO[activeId];
   const activeLabel = TABS[activeIndex].label;
@@ -22,7 +20,9 @@ const Essentials = () => {
     <div className="px-4 max-lg:py-20 max-md:py-15 max-sm:py-10">
       <div className="max-w-285 mx-auto flex justify-center flex-col items-center">
         <div className="text-center max-w-190.75">
-          <Heading vari={"sec"}>Everyday Essentials for Active Bodies </Heading>
+          <Heading vari={"sec"} className=" animate__animated  animate__zoomIn">
+            Everyday Essentials for Active Bodies{" "}
+          </Heading>
           <Para vari={"sec"} className="md:mt-4 mt-2">
             Simple, effective formulas that support movement, sleep, and daily
             performance.
@@ -81,7 +81,6 @@ const Essentials = () => {
             />
           </div>
 
-          {/* Products (key ab item.id hai) */}
           {products.map((item) => (
             <div
               key={item.id}
@@ -95,34 +94,33 @@ const Essentials = () => {
                 className="max-lg:w-full"
               />
               <div className="flex flex-col justify-between">
-              <div className="max-w-62.5">
-                <p className="font-normal text-lg leading-160 text-dark-gray mt-3 flex flex-row items-center gap-2 robot">
-                  {item.number}
-                  <span>
-                    <Icon icon={"stars"} />
-                  </span>
-                </p>
-                <h2 className="uppercase mt-3.5 robot font-semibold text-xl leading-120 text-black">
-                  {item.heading}
-                </h2>
-                <p className="font-normal text-lg leading-160 text-dark-gray">
-                  {item.para}
-                </p>
-              </div>
-              <div className="flex justify-between items-center mt-12.75">
-                <div className="flex items-center">
-                  <p className="font-normal text-base leading-120 text-dark-gray archivo line-through decoration-1">
-                    {item.amount}
+                <div className="max-w-62.5">
+                  <p className="font-normal text-lg leading-160 text-dark-gray mt-3 flex flex-row items-center gap-2 robot">
+                    {item.number}
+                    <span>
+                      <Icon icon={"stars"} />
+                    </span>
                   </p>
-                  <p className="font-normal text-xl leading-120 text-black archivo">
-                    {item.less}
+                  <h2 className="uppercase mt-3.5 robot font-semibold text-xl leading-120 text-black">
+                    {item.heading}
+                  </h2>
+                  <p className="font-normal text-lg leading-160 text-dark-gray">
+                    {item.para}
                   </p>
                 </div>
-                <div className="bg-light-orange w-10.75 h-10.75 rounded-[23px] flex justify-center items-center">
-                  <Icon icon={"plus"} />
+                <div className="flex justify-between items-center mt-12.75">
+                  <div className="flex items-center">
+                    <p className="font-normal text-base leading-120 text-dark-gray archivo line-through decoration-1">
+                      {item.amount}
+                    </p>
+                    <p className="font-normal text-xl leading-120 text-black archivo">
+                      {item.less}
+                    </p>
+                  </div>
+                  <div className="bg-light-orange w-10.75 h-10.75 rounded-[23px] flex justify-center items-center">
+                    <Icon icon={"plus"} />
+                  </div>
                 </div>
-              </div>
-
               </div>
             </div>
           ))}
